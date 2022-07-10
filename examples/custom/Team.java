@@ -17,19 +17,16 @@ public class Team {
 	private int teamId; 
 	private int potentialOfProject, difficulty, salary, humans, workingHour, availablePosition;
 	private int[] preferList, employeeList; 
-//	private List<Employee> employeeList;
-	private double satisfaction;
 	
 //	constructor
-	public Team(int id, int potentialOfProject, int difficulty, int salary, int humans, int workingHour, int availablePosition, int[] preferList) {
+	public Team(int id, int potentialOfProject, int difficulty, int salary, 
+			int humans, int workingHour, int availablePosition, int[] preferList) {
 		//attribute to calculate satisfaction
 		this.potentialOfProject = potentialOfProject;
 		this.difficulty = difficulty;
 		this.salary = salary;
 		this.humans = humans;
 		this.workingHour = workingHour;
-		//init satisfaction
-		this.satisfaction = 0;
 		
 		// attribute to manage 
 		this.teamId = id; 
@@ -123,55 +120,6 @@ public class Team {
 			}
 		}
 	}
-
-	//reset satisfaction
-//	public void setSatisfaction() {
-//		this.satisfaction = 0;
-//	}
-
-	/**
-	 * <pre>
-	 * satisfaction = avg(all stat of employee in list) 
-	 * if still have free position
-	 * 		satisfaction - available position 
-	 * </pre>
-	 **/
-//	public double getSatisfaction() {
-//		
-//		int count = availablePosition;
-//		
-//		for(Employee e : employeeList) {
-//			
-//			// null position
-//			if(e == null) {
-//				satisfaction--;
-//				count--;
-//				continue;
-//			} 
-//			
-//			// calculate satisfaction
-//			double[] scores = {e.getTechnicalSkill(), 
-//					e.getExperience(), 
-//					e.getAttitude(), 
-//					e.getReponsibility()};
-//			
-//			for(double score : scores) {
-//				
-//				// update score
-//				if (score <= 5) score *= (score/10); 
-//				else score += (score-5);				
-//				
-//				//update satisfaction
-//				this.satisfaction += score;
-//			} // end for scores
-//			
-//		}// end for employee list
-//		
-//		//get average
-//		satisfaction /= count;
-//		
-//		return satisfaction;
-//	}
 
 	public static void main(String[] args) {
 		Team t = new Team(0, 5, 5, 6, 4, 6, 2, new int[] {0});

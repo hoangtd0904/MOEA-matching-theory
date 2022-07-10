@@ -12,12 +12,10 @@ import java.util.Arrays;
 public class Employee {
 
 	// attribute
-	private int employeeId; // ?
+	private int employeeId;
 	private int technicalSkill, experience, attitude, responsibility, belongTeam;
 	private boolean isFree;
 	private int[] preferList;
-	private double satisfaction;
-//	private Team belongTeam;
 
 	// constructor
 	public Employee(int employeeId, int abilityInProject, 
@@ -30,8 +28,6 @@ public class Employee {
 		this.experience = experience;
 		this.attitude = attitude;
 		this.responsibility = responsibility;
-		// init satisfaction
-		this.satisfaction = 0;
 
 		// att to manage
 		this.belongTeam = -1;
@@ -103,43 +99,6 @@ public class Employee {
 	public void setBelongTeam(int belongTeam) {
 		this.belongTeam = belongTeam;
 	}
-
-	// reset satisfaction
-//	public void setSatisfaction() {
-//		this.satisfaction = 0;
-//	}
-
-	/**
-	 * <pre>
-	 * 	if still free
-	 * 		satisfaction is negative
-	 * 	else
-	 * 		calculate satisfaction by belong Team
-	 * </pre>
-	 **/
-//	public double getSatisfaction() {
-//		// TODO calculate satisfaction
-//		if (isFree) {
-//			return -50; // disappointing (?)
-//		} else {
-//			double[] scores = { this.belongTeam.getPotentialOfProject(), this.belongTeam.getDifficulty(),
-//					this.belongTeam.getSalary(), this.belongTeam.getHumans(), this.belongTeam.getWorkingHour() };
-//
-//			for (double score : scores) {
-//
-//				// update score
-//				if (score <= 5)
-//					score *= (score/10);
-//				else
-//					score += (score - 5);
-//
-//				// update satisfaction
-//				satisfaction += score;
-//			}
-//		}
-//
-//		return satisfaction;
-//	}
 
 //	test
 	public static void main(String[] args) {

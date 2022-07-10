@@ -5,7 +5,6 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Random;
 
 public class GaleShapleyTest {
 
@@ -40,7 +39,6 @@ public class GaleShapleyTest {
 		// update free position (OUT OF BOUND error) -> free position not bigger than
 		// the amount of employee <- use for looping
 		this.freePosition = (this.freePosition > numberOfEmployee) ? numberOfEmployee : this.freePosition;
-
 	}
 
 	/**
@@ -78,8 +76,6 @@ public class GaleShapleyTest {
 	 * </pre>
 	 **/
 	public Map<Integer, Team> matching(List<Employee> employees) {
-		// reset satisfaction (?)
-		System.err.println("i am matching rn");
 		// loop the match on free position
 		for (int i = 0; i < freePosition; i++) {
 
