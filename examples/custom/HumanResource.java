@@ -15,7 +15,7 @@ import org.moeaframework.core.variable.RealVariable;
 import org.moeaframework.problem.AbstractProblem;
 //import org.moeaframework.util.Vector;
 
-public class test {
+public class HumanResource {
 
 	/**
 	 * <pre>
